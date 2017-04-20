@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="ControlResourceError.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Toolkit="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Key="MarkdownStyle" TargetType="Toolkit:MarkdownTextBlock">
+            <Setter Property="BorderBrush" Value="Gold"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="LinkForeground" Value="Red" />
+            <Setter Property="ImageStretch" Value="UniformToFill"/>
+        </Style>
+    </Page.Resources>
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Toolkit:MarkdownTextBlock Text="[Google](https://www.google.com)" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource MarkdownStyle}"/>
+    </Grid>
+</Page>
